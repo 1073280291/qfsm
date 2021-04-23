@@ -1,0 +1,168 @@
+﻿
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>轻风数码</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <style type="text/css">
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+    </style>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#info > div").css({ "margin-top": "15px" });
+        })
+
+    </script>
+</head>
+<body>
+    <div style="width: 100%;">
+        <div class="container-fluid">
+            <div class="col-md-3 hidden-sm"></div>
+            <div class="col-md-6 col-sm-12">
+                <div class="panel panel-default">
+                    <div class=" panel-heading text-center" style="font-size: 23px; font-weight: bolder;">轻风数码  配件具体需求</div>
+                    <div class="panel-body" id="info">
+
+                        <div class="input-group">
+                            <span class="input-group-addon">姓名</span>
+                            <input type="text" class="form-control" placeholder="请输入姓名" required="required" id="xm" />
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon">性别</span>
+                            <select class="form-control chosen-select" required="required" id="xb">
+                                <option value="" selected="selected">请选择</option>
+                                <option value="男">男</option>
+                                <option value="女">女</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon">区域</span>
+                            <select class="form-control chosen-select" required="required" id="school">
+                                <option value="" selected="selected">请选择</option>
+                                <option value="金银湖">金银湖</option>
+                                <option value="常青">常青</option>
+                                <option value="常青公寓">常青公寓</option>
+                                <option value="校外">校外</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon">联系QQ</span>
+                            <input type="text" class="form-control" placeholder="请输入联系QQ和电话任选其一" id="qq" />
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon">联系电话</span>
+                            <input type="text" class="form-control" placeholder="请输入联系QQ和电话任选其一" id="tel" />
+                        </div>
+
+                        <div class="input-group">
+                            <span class="input-group-addon">手机型号(含颜色)</span>
+                            <input type="text" class="form-control" placeholder="手机型号(含颜色)" id="xh" />
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon">是否原装</span>
+                            <select class="form-control chosen-select" id="yz" required="required">
+                                <option value="是">是</option>
+                                <option value="否" selected="selected">否</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon">配件具体需求</span>
+                            <input type="text" class="form-control" placeholder="配件具体需求" id="xq" />
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon">选择配送地点</span>
+                            <select class="form-control chosen-select" id="dd" required="required">
+                                <option value="" selected="selected">请选择</option>
+                                <option value="食堂">食堂</option>
+                                <option value="寝室">寝室</option>
+                                <option value="教室">教室</option>
+                                <option value="其他">其他</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon">具体门牌号码</span>
+                            <input type="text" class="form-control" placeholder="具体门牌号码" required="required" id="mp" />
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon">更多需求</span>
+                            <input type="text" class="form-control" placeholder="选填" id="xqxx" />
+                        </div>
+                        <div style="width: 100%" class="text-center">
+                            <span id="test"></span>
+                            <input type="submit" id="ok" class="form-control btn btn-primary" value="提交" style="width: 40%; height: 35px; margin: auto;" onclick="tj()" />
+                            <a onclick="fh()" style="cursor:pointer">返回</a>
+                            <script type="text/javascript">
+                                function fh() {
+                                    history.back();
+                                }
+                            </script>
+                        </div>
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="myModalLabel">操作页面</h4>
+                                    </div>
+                                    <form action="#" method="post">
+                                        <div class="modal-body">
+                                            <div class="text-center text-danger">页面正在提交ing</div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <script type="text/javascript">
+                                function tj() {
+
+                                    if ($("#xm").val() == "" || $("#xb").val() == "" || $("#xq").val() == "" || ($("#qq").val() == "" && $("#tel").val() == "") || $("#dd").val() == "" || $("#mp").val() == "" || $("#xt option:selected").val() == "") {
+                                        alert("基本信息填写完整");
+                                        return;
+                                    }
+                                    $("#myModal").modal();
+                                    $.post("Handler.ashx", {
+                                        name: $("#xm").val(),
+                                        sex: $("#xb").val(),
+                                        school: $("#school").val(),
+                                        qq: $("#qq").val(),
+                                        tel: $("#tel").val(),
+                                        xh: $("#xh").val(),
+                                        type: '手机配件',
+                                        xq: $("#xq").val() + $("#yz").val(),
+                                        location: $("#dd").val(),
+                                        address: $("#mp").val(),
+                                        pri: '',
+                                        status: '已下单',
+                                        ggxq: $("#xqxx").val()
+                                    },
+                                    function (data, status) {
+                                        if (data == "ok") {
+                                            $("#myModal").modal('hide');
+                                            window.location.href = "HtmlPage.htm";
+                                        } else {
+                                            alert("下单失败，请联系店主");
+                                        }
+
+                                    });
+
+
+                                }
+
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 hidden-sm"></div>
+        </div>
+    </div>
+</body>
+</html>

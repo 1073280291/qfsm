@@ -1,0 +1,236 @@
+h1{
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+i {
+  vertical-align: bottom;
+}
+th {
+  text-transform: uppercase;
+}
+
+.brand-logo {
+  margin-left: 15px;
+}
+
+.parallax img{
+  filter: blur(5px);
+}
+main{
+  background-color: rgb(245, 242, 239);
+  padding-bottom: 0;
+
+}
+.backg{
+  background: url(../img/back.png) left top repeat;
+  opacity: 0.8;
+}
+.card .attach-to-bottom{
+  width: 95%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 40px;
+}
+.total-row {
+  font-weight: 700;
+}
+
+.input-field input[type=text]:focus,
+.input-field input[type=tel]:focus,
+.input-field input[type=email]:focus,
+.input-field input[type=number]:focus,
+ .input-field select:focus
+ {
+  border-bottom: 1px solid #42a5f5;
+  box-shadow: 0 1px 0 0 #42a5f5;
+}
+.input-field label.active {
+  color: #42a5f5 !important;
+}
+textarea.materialize-textarea:focus {
+  border-bottom: 1px solid #42a5f5 !important;
+  box-shadow: 0 1px 0 0 #42a5f5 !important;
+}
+.input-field .prefix.active,
+.input-field li span {
+  color: #42a5f5;
+}
+
+#hero-text {
+  position: relative;
+  top: 25%;
+}
+
+#previews img{
+  width: 100%;
+}
+
+#menu .card{
+  height: 560px;
+  background: -webkit-linear-gradient(left, rgb(148, 209, 245) , rgb(179, 221, 245)); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, rgb(148, 209, 245) , rgb(179, 221, 245)); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, rgb(148, 209, 245) , rgb(179, 221, 245)); /* Firefox 3.6 - 15 */
+    background: linear-gradient(right, rgb(148, 209, 245) , rgb(179, 221, 245)); /* 标准的语法（必须放在最后） */
+}
+#menu .card-image{
+  max-height: 250px;
+  columns: rgb(240, 237, 235);
+}
+#menu .card img{
+  max-height: 250px;
+  object-fit: cover;
+}
+#menu .card h6{
+  vertical-align: bottom;
+  
+}
+
+#menu .card-action{
+  height: 60px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  font-weight: bold;
+  background: -webkit-linear-gradient(left, rgb(148, 209, 245) , rgb(179, 221, 245)); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, rgb(148, 209, 245) , rgb(179, 221, 245)); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, rgb(148, 209, 245) , rgb(179, 221, 245)); /* Firefox 3.6 - 15 */
+    background: linear-gradient(right, rgb(148, 209, 245) , rgb(179, 221, 245)); /* 标准的语法（必须放在最后） */
+}
+.card .card-action {
+  position: relative;
+  background-color: inherit;
+  border-top: 1px solid rgba(160, 160, 160, 0.2);
+  padding: 5px;
+  z-index: 2;
+}
+ .btn-large,
+.btn-flat {
+  float: left;
+  border: none;
+  text-align: center;
+  border-radius: 2px;
+  display: inline-block;
+  width: 105px;
+  height: 44px;
+  line-height: 44px;
+  outline: 0;
+  text-transform: uppercase;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+}
+.btn{
+  border: none;
+  text-align: center;
+  border-radius: 2px;
+  display: inline-block;
+  width:60%;
+  left: 20%;
+  height: 44px;
+  line-height: 44px;
+  outline: 0;
+  padding: 0 2rem;
+  text-transform: uppercase;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+}
+.add-to-cart{
+  cursor: pointer;
+  font-size: 21px;
+  font-family: "楷体";
+}
+
+.card-content p{
+  font-size: 16px;
+  overflow: hidden;
+}
+#menu h3{
+  background: -webkit-linear-gradient(left top, #99b8ac , #d3dae0); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(bottom right, #99aab8, #d3dae0); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(bottom right, #99aab8, #d3dae0); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to bottom right, #99aab8 , #d3dae0); /* 标准的语法（必须放在最后） */
+    font-size: 32px;
+}
+#menu h4{
+  background: rgb(245, 242, 239);
+  font-size: 18px;
+  color: #f08484;
+  
+}
+.row {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+  
+}
+footer.page-footer {
+  margin-top: 0px;
+  padding-top: 0px;
+  background-color: #ee6e73;
+}
+#otheraa{
+  width: 40% ;background-color: #e7e5d2;
+  font-size: 16px;
+  font-weight: bold;
+  color: #232629;
+}
+.modal-content{
+  background-color: #f3f2ea;
+}
+#centter{
+  text-align: center;
+  background-color: #f3f2ea;
+  padding: 5px;
+}
+.modal-content{
+  padding: 24px;
+}
+.modal-content p{
+  font-size: 17px;
+}
+.boxoo{
+  float: left;
+  height: 45px;
+  width: 45px;
+  background-color: #f1fa72;
+  border-radius: 50%;
+  line-height: 45px;
+  text-align: center;
+  font-size: 20px;
+}
+.boxo{
+  float: left;
+  height: 45px;
+  width: auto;
+  line-height: 45px;
+  margin-left: 15px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+.card-box{
+ 
+  float: left;
+  width: 50%;
+  height: 100%;
+ 
+}
+
+.light-green {
+  background-color: #afc991 !important;
+}
+.teal {
+  background-color: #53c2b7 !important;
+}
+.lime {
+  background-color: #d0d4ac !important;
+}
+.cyan {
+  background-color: #30d9f0 !important;
+}
